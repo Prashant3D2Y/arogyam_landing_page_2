@@ -13,12 +13,8 @@
   position: relative;
   overflow: hidden;
 }
-.wave {
-  position: absolute;
-  top: 0;
-  right: 10%;
-}
-nav {
+
+.menu-container {
   width: 90%;
   margin: auto;
   padding-top: 20px;
@@ -95,9 +91,11 @@ nav ul a:hover:after {
 }
 .swiper {
   width: 20rem;
+  margin: 0px;
 }
 .swiper-slide {
   display: flex;
+  padding: 0px;
   align-items: center;
   justify-content: center;
 }
@@ -105,13 +103,6 @@ nav ul a:hover:after {
   position: absolute;
   right: 8%;
   bottom: 20%;
-}
-.box {
-  display: flex;
-  align-items: center;
-}
-.right .box .image img {
-  width: 70%;
 }
 .image {
   margin-top: 2rem;
@@ -126,6 +117,13 @@ nav ul a:hover:after {
 }
 .image:hover {
   background-color: rgba(73, 66, 52, 0.7);
+}
+.box {
+  display: flex;
+  align-items: center;
+}
+.right .box .image img {
+  width: 70%;
 }
 .box .inner-box {
   margin: 1.5rem 0 0 1rem;
@@ -161,4 +159,203 @@ nav ul a:hover:after {
 }
 .social-links i:hover {
   transform: translateY(-5px);
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #93c572 70%, #93c572 30%);
+    position: relative;
+    overflow: hidden;
+  }
+  nav {
+    display: flex;
+  }
+
+  .nav-ham {
+    flex: 4;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav img {
+    height: 65px;
+
+    display: flex;
+    padding: 0px 8px;
+    flex: 1;
+  }
+
+  .hamburger {
+    width: 30px;
+    height: 5px;
+    background-color: #494234;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #494234;
+    display: block;
+  }
+
+  .menu-container {
+    width: 100%;
+    margin-left: 10px;
+    padding-top: 20px;
+    display: flex;
+    /* justify-content: ; */
+    align-items: center;
+  }
+
+  .menu-container ul {
+    display: none;
+    text-align: center;
+  }
+
+  .menu-container.active ul {
+    display: block;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    text-align: center;
+  }
+
+  .menu-container li {
+    background: #93c572;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .menu-container a {
+    width: 100px;
+    /* background-color: white; */
+  }
+
+  .main-content {
+    align-items: center;
+    margin-top: 10px;
+  }
+  .main-content h1 {
+    font-size: 20px;
+    letter-spacing: 10px;
+    color: #494234;
+    text-align: center;
+  }
+  .main-content p {
+    margin-top: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .main-content button {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px 10px;
+    border-radius: 50%;
+    background-color: #494234;
+    color: white;
+    cursor: pointer;
+  }
+
+  .main-content {
+    width: 60%;
+    padding: 10px;
+    /* margin: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .right {
+    position: relative;
+
+    padding-left: 65px;
+  }
+  .box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    gap: 20px;
+    padding: 5px 0px;
+    margin: 20px 0px;
+    border-radius: 20px;
+  }
+  .right .box .image img {
+    width: 50%;
+  }
+  .box .inner-box {
+    margin: 5px;
+  }
+  .box .inner-box p {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .social-links {
+    position: relative;
+    margin: 20px 20px;
+    padding-left: 65px;
+    bottom: 5%;
+  }
+  .social-links::before {
+    display: none;
+    content: "";
+    width: 80%;
+    height: 3px;
+    position: absolute;
+    top: 42%;
+    left: -150px;
+    background-color: #494234;
+  }
+  .social-links i {
+    margin: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  .social-links i:hover {
+    transform: translateY(-5px);
+  }
+
+  .main-content button {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    background-color: #494234;
+    color: white;
+    cursor: pointer;
+  }
+
+  .image-pista {
+    flex-basis: 100%;
+    background-color: azure;
+    border-radius: 20px;
+  }
+  .main-text {
+    flex-basis: 100%;
+  }
+  .image-pista img {
+    padding: 20px 20px;
+    width: 30%;
+  }
 }
